@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test de Mouvements - Profilage Sportif Decathlon</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <div id="movementSection" class="movement-section show">
+        <div class="movement-test">
+            <div class="progress-bar"><div id="movementProgress" class="progress-fill" style="width:20%"></div></div>
+            <div style="text-align:center;font-size:19px;margin:15px 0;font-weight:600;color:#0082c3;">
+                Mouvement <span id="currentMove">1</span> sur 4
+            </div>
+
+            <div class="movement active" data-move="1">
+                <h2>Ton corps mérite le mouvement : faisons le premier pas ensemble.</h2>
+                <div class="movement-title">1. Squat complet</div>
+                <p style="margin:20px 0;font-size:18px;color:#333;">
+                    Descends comme si tu t’asseyais sur une chaise invisible. Cuisses parallèles, dos droit, regard devant !
+                </p>
+                <div class="images-do-dont">
+                    <div class="image-box do"><div class="label-do">À FAIRE</div><img src="squats/c.png" alt="Squat correct"></div>
+                    <div class="image-box dont"><div class="label-dont">À ÉVITER</div><img src="squats/f.png" alt="Squat incorrect"></div>
+                </div>
+                <div class="success-message" id="msg1">KO ! Tu viens d’éclater ce niveau… prochain combat : Obélix en mode boss !</div>
+                <button class="btn-validate" onclick="validateMovement(1)">J'ai réussi !</button>
+            </div>
+
+            <div class="movement" data-move="2">
+                <h2>Commence où tu es, avance à ton rythme.</h2>
+                <div class="movement-title">2. Gainage (Plank)</div>
+                <p style="margin:20px 0;font-size:18px;color:#333;">
+                    Tiens la position au moins 30 secondes. Tout le corps aligné, abdos serrés, comme une planche en bois !
+                </p>
+                <div class="images-do-dont">
+                    <div class="image-box do"><div class="label-do">À FAIRE</div><img src="Planche/c.png" alt="Plank correct"></div>
+                    <div class="image-box dont"><div class="label-dont">À ÉVITER</div><img src="Planche/f.png" alt="Plank incorrect"></div>
+                </div>
+                <div class="success-message" id="msg2">Combo parfait ! Passe au niveau suivant, attention… Obélix charge</div>
+                <button class="btn-validate" onclick="validateMovement(2)">J'ai réussi !</button>
+            </div>
+
+            <div class="movement" data-move="3">
+                <h2>Un petit mouvement, un grand mood !</h2>
+                <div class="movement-title">3. Fentes avant</div>
+                <p style="margin:20px 0;font-size:18px;color:#333;">
+                    Grand pas en avant, genoux à 90°, buste droit. Alterne les jambes comme un pro !
+                </p>
+                <div class="images-do-dont">
+                    <div class="image-box do"><div class="label-do">À FAIRE</div><img src="Fentes/c.png" alt="Fente correcte" ></div>
+                    <div class="image-box dont"><div class="label-dont">À ÉVITER</div><img src="Fentes/f.png" alt="Fente incorrecte"></div>
+                </div>
+                <div class="success-message" id="msg3">Niveau validé ! Potion magique + combo spécial… next fight !</div>
+                <button class="btn-validate" onclick="validateMovement(3)">J'ai réussi !</button>
+            </div>
+
+            <div class="movement" data-move="4">
+                <h2>Bouge un peu, Shine beaucoup !</h2>
+                <div class="movement-title">4. Traction ou suspension active</div>
+                <p style="margin:20px 0;font-size:18px;color:#333;">
+                    Tiens-toi suspendu sans élan ou fais une vraie traction complète. Menton au-dessus de la barre = victoire totale !
+                </p>
+                <div class="images-do-dont">
+                    <div class="image-box do"><div class="label-do">À FAIRE</div><img src="Traction/c.png" alt="Traction correcte"></div>
+                    <div class="image-box dont"><div class="label-dont">À ÉVITER</div><img src="Traction/f.png" alt="Traction avec élan"></div>
+                </div>
+                <div class="success-message" id="msg4">Félicitations ! Tu viens d’entrer dans la légende des combattants du village !</div>
+                <button class="btn-validate" onclick="validateMovement(4)">J'ai réussi !</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="script.js"></script>
+<script>
+    // Initialisation spécifique à cette page
+    initMovements();
+</script>
+</body>
+</html>

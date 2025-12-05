@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Questionnaire - Profilage Sportif Decathlon</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <div id="formSection">
+        <h2>Ta seule limite, c'est toi.<br><span style="font-size:18px;color:#555;">Avec Decathlon, c'est encore plus facile</span></h2>
+        <div class="progress-text">Question <span id="currentQuestion">1</span> sur 6</div>
+        <div class="progress-bar"><div id="progressFill" class="progress-fill" style="width:16.66%"></div></div>
+
+        <div class="question-slide active" data-question="1">
+            <div class="question">
+                <p>Quel est votre niveau éducatif ?</p>
+                <div class="options-container">
+                    <label><input type="radio" name="educatif" value="Collégien"> Collégien</label>
+                    <label><input type="radio" name="educatif" value="Lycéen"> Lycéen</label>
+                    <label><input type="radio" name="educatif" value="Étudiant"> Étudiant</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="question-slide" data-question="2">
+            <div class="question">
+                <p>Quel est votre niveau sportif ?</p>
+                <div class="options-container">
+                    <label><input type="radio" name="niveau" value="Débutant"> Débutant</label>
+                    <label><input type="radio" name="niveau" value="Intermédiaire"> Intermédiaire</label>
+                    <label><input type="radio" name="niveau" value="Avancé"> Avancé</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="question-slide" data-question="3">
+            <div class="question">
+                <p>Quel est votre poids (kg) ?</p>
+                <input id="weight" type="number" min="30" placeholder="Ex: 70" />
+            </div>
+        </div>
+
+        <div class="question-slide" data-question="4">
+            <div class="question">
+                <p>Quelle est votre taille (cm) ?</p>
+                <input id="height" type="number" min="100" placeholder="Ex: 175" />
+            </div>
+        </div>
+
+        <div class="question-slide" data-question="5">
+            <div class="question">
+                <p>Quels sports pratiquez-vous ?</p>
+                <div class="options-container">
+                    <label><input type="checkbox" name="sports" value="Fitness"> Fitness</label>
+                    <label><input type="checkbox" name="sports" value="Football"> Football</label>
+                    <label><input type="checkbox" name="sports" value="Natation"> Natation</label>
+                    <label><input type="checkbox" name="sports" value="Course"> Course</label>
+                    <label><input type="checkbox" name="sports" value="Tennis"> Tennis</label>
+                    <label><input type="checkbox" name="sports" value="Padel"> Padel</label>
+                    <label><input type="checkbox" name="sports" value="Handball"> Handball</label>
+                    <label><input type="checkbox" name="sports" value="Gymnastique"> Gymnastique</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="question-slide" data-question="6">
+            <div class="question">
+                <p>Quel est votre objectif principal ?</p>
+                <div class="options-container">
+                    <label><input type="checkbox" name="objectifs" value="Perdre du poids"> Perdre du poids</label>
+                    <label><input type="checkbox" name="objectifs" value="Prendre du muscle"> Prendre du muscle</label>
+                    <label><input type="checkbox" name="objectifs" value="Être en bonne santé"> Être en bonne santé</label>
+                    <label><input type="checkbox" name="objectifs" value="Améliorer la posture"> Améliorer la posture</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="navigation-buttons">
+            <button id="prevBtn" class="btn-previous" disabled>Précédent</button>
+            <button id="nextBtn">Suivant</button>
+        </div>
+    </div>
+</div>
+<script src="script.js"></script>
+<script>
+    // Initialisation spécifique à cette page
+    initQuestionnaire();
+</script>
+</body>
+</html>
